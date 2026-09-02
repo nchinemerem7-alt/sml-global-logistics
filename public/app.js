@@ -1,3 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SML Global Logistics | Sky Motion Lane Logistics</title>
+    <!-- Premium Google Fonts and Icons Framework integration -->
+    <link rel="stylesheet" href="https://cloudflare.com" />
+    <link rel="stylesheet" href="https://cloudflare.com" />
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com" />
+    <script src="https://unpkg.com"></script>
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .hero-bg {
+            background: linear-gradient(rgba(11, 19, 41, 0.75), rgba(11, 19, 41, 0.85)), url('https://unsplash.com');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-slate-800">
+
+    <!-- TOP HEADER UTILITIES BANNER -->
+    <div class="bg-blue-950 text-gray-300 text-xs px-4 py-2.5 flex flex-wrap justify-between items-center border-b border-gray-800" style="background-color: #0b1329;">
+        <div class="flex items-center space-x-4 text-xxs sm:text-xs">
+            <span><i class="fas fa-map-marker-alt text-amber-500 mr-1"></i> London, UK</span>
+            <span><i class="fas fa-phone-alt text-amber-500 mr-1"></i> +44 1234 567890</span>
+            <span class="hidden md:inline"><i class="fas fa-envelope text-amber-500 mr-1"></i> support@smlglobal-logistics.com</span>
+        </div>
+        <div class="flex items-center space-x-4 font-bold text-white">
+            <a href="#track-id" class="hover:text-amber-400"><i class="fas fa-search mr-1"></i> Track</a>
+            <a href="#" onclick="alert('Portal system active. Database seeding completed.')" class="hover:text-amber-400"><i class="fas fa-lock mr-1"></i> Admin Console</a>
+        </div>
+    </div>
+
+    <!-- MAIN BRAND NAVIGATION HEADER -->
+    <nav class="bg-white shadow-sm px-4 sm:px-6 py-4 flex justify-between items-center sticky top-0 z-50">
+        <div class="flex items-center space-x-2">
+            <div class="text-xl sm:text-2xl font-extrabold tracking-tight text-blue-900" style="color: #1e3a8a;">
+                <span class="text-amber-500">SML</span> GLOBAL LOGISTICS
+            </div>
+        </div>
+        <div class="hidden lg:flex space-x-6 font-bold text-gray-600 text-xs uppercase tracking-wider">
+            <a href="#" class="text-blue-900 border-b-2 border-blue-900 pb-1">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Services</a>
+            <a href="#track-id">Tracking Hub</a>
+            <a href="#">Contact</a>
+        </div>
+        <button onclick="alert('Pricing calculation API ready. Complete backend link intact.')" class="bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs uppercase px-4 py-2.5 rounded transition shadow-sm">Get Quote</button>
+    </nav>
+
+    <!-- BRAND BANNER & ACTION ENGINE INPUT INTERFACE -->
+    <header class="hero-bg text-white px-4 sm:px-6 py-16 min-h-[480px] flex items-center">
+        <div class="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <div class="lg:col-span-7 space-y-4">
+                <span class="text-amber-400 font-bold tracking-widest text-xs uppercase block border-l-4 border-amber-400 pl-2">Moving Beyond Borders</span>
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">Global Logistics<br>Delivered with Care</h1>
+                <p class="text-gray-300 text-xs sm:text-sm max-w-xl leading-relaxed">Reliable, Efficient, On Time, Every Time. SML provisions secure air cargo freight forwarding, coastal sorting hubs, and domestic courier pipelines.</p>
+            </div>
+
+            <!-- SHIPMENT TELEMETRY INPUT GATEWAY PANEL -->
+            <div class="lg:col-span-5 bg-slate-900 bg-opacity-95 p-5 sm:p-6 rounded-xl shadow-2xl border border-gray-800" style="background-color: #0b1329;">
+                <h3 class="text-white text-base sm:text-lg font-bold uppercase tracking-wider mb-1 flex items-center">
+                    <i class="fas fa-cube text-amber-500 mr-2"></i> Track Your Shipment
+                </h3>
+                <p class="text-gray-400 text-xs mb-4">Enter your tracking code below to unlock the map view parameters.</p>
+                
+                <div class="space-y-3 text-slate-800">
+                    <div class="relative">
+                        <input type="text" id="track-id" placeholder="Enter Reference (e.g. SML-48392019)" class="w-full p-3 pl-10 bg-white border border-gray-300 rounded text-sm font-semibold uppercase tracking-wider focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        <i class="fas fa-search absolute left-3.5 top-3.5 text-gray-400 text-sm"></i>
+                    </div>
+                    <button onclick="startTrackingPipeline()" class="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 rounded text-xs uppercase tracking-widest transition shadow">
+                        Track Shipment
+                    </button>
+                    
+                    <div class="pt-2 border-t border-gray-800 flex flex-col space-y-2">
+                        <!-- Administrative Mock Controls Setup Trigger -->
+                        <button onclick="createNewTestShipment()" class="w-full bg-blue-700 hover:bg-blue-600 text-white font-bold py-2 rounded text-xxs uppercase tracking-wider transition">
+                            ➕ [Ops: Create New Active Tracking Node]
+                        </button>
+                        <button onclick="simulateDriverMovement()" class="w-full bg-gray-800 hover:bg-gray-700 text-gray-300 font-mono text-xxs py-1.5 rounded transition">
+                            🚚 [Simulator: Move Active Delivery Truck]
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- INTERACTIVE MAP & ROUTE TELEMETRY DISPLAY TERMINAL CONTAINER -->
+    <section id="tracking-workspace" class="max-w-6xl mx-auto my-8 px-4 hidden">
+        <div class="bg-white rounded-xl shadow-xl border border-gray-200 overflow-hidden">
+            <div class="bg-blue-900 text-white px-4 py-3 flex justify-between items-center" style="background-color: #1e3a8a;">
+                <h4 class="font-bold text-xs uppercase tracking-wider"><i class="fas fa-satellite-dish mr-2 text-amber-400 animate-pulse"></i> Live Telemetry Feed Dashboard</h4>
+                <span id="lbl-id" class="bg-amber-500 text-white text-xs font-mono font-bold px-2.5 py-0.5 rounded">SML-XXXX</span>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 border-b text-center text-sm font-semibold">
+                <div class="p-4 border-r border-gray-100 bg-blue-50 bg-opacity-40">
+                    <span class="block text-xxs uppercase text-gray-400 font-bold tracking-widest mb-0.5">Remaining Distance</span>
+                    <span id="stat-distance" class="text-2xl font-black text-blue-900">---</span> <span class="text-xs text-blue-900">miles</span>
+                </div>
+                <div class="p-4 border-r border-gray-100 bg-green-50 bg-opacity-40">
+                    <span class="block text-xxs uppercase text-gray-400 font-bold tracking-widest mb-0.5">ETA Window</span>
+                    <span id="stat-eta" class="text-2xl font-black text-green-700">---</span> <span class="text-xs text-green-700">hours left</span>
+                </div>
+                <div class="p-4 bg-purple-50 bg-opacity-40">
+                    <span class="block text-xxs uppercase text-gray-400 font-bold tracking-widest mb-0.5">Vehicle Velocity</span>
+                    <span id="stat-speed" class="text-2xl font-black text-purple-800">---</span> <span class="text-xs text-purple-800">MPH</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3">
+                <div class="p-5 bg-gray-50 border-r border-gray-200 space-y-4">
+                    <div>
+                        <h5 class="text-xxs uppercase text-gray-400 font-bold tracking-wider mb-2">Manifest Details</h5>
+                        <div class="space-y-1 text-xs">
+                            <p class="flex justify-between border-b pb-1"><strong>Sender:</strong> <span id="lbl-sender" class="text-gray-600">---</span></p>
+                            <p class="flex justify-between border-b pb-1"><strong>Recipient:</strong> <span id="lbl-receiver" class="text-gray-600">---</span></p>
+                            <p class="flex justify-between border-b pb-1"><strong>Path Profile:</strong> <span id="lbl-path" class="font-bold text-blue-900">---</span></p>
+                        </div>
+                    </div>
+                    <div>
+                        <h5 class="text-xxs uppercase text-gray-400 font-bold tracking-wider mb-2">Checkpoint Logs</h5>
+                        <ul id="geo-history-log" class="space-y-2 border-l-2 border-blue-900 pl-3 text-xxs max-h-[180px] overflow-y-auto"></ul>
+                    </div>
+                </div>
+                <div class="lg:col-span-2 relative">
+                    <div id="live-map" class="w-full h-[320px] sm:h-[380px]"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE BUSINESS CONTAINER SERVICES GRAPHIC MATRIX -->
+    <section class="max-w-6xl mx-auto px-4 py-12">
+
+Our Services
+Specialized Global Logistics
+
+
+Air Freight
+Fast cross-border transit connections.
+
+
+
+Ocean Freight
+Global cargo volume transport chains.
+
+
+
+Road Freight
+Optimized cross-country distributions.
+
+
+
+Warehousing
+Secure asset depot storage.
+
+
+
+Customs Support
+Expert boundary clearance agents.
+
+
+
+Door Delivery
+Seamless final door handovers.
+
+
+150+
+Countries Covered
+
+
+20k+
+Shipments Handled
+
+
+10k+
+Satisfied Clients
+
+
+99.2%
+On-Time Accuracy
+
+
+
+© 2026 SML Global Logistics. All Rights Reserved. Private Courier Routing Node.
+
+5. Click **Commit changes** to save it.
+
+---
+
+### ⚙️ Step 2: Update the `public/app.js` Engine script
+Now we need to add the active frontend tracking automation. Let's update `public/app.js` to handle data initialization and un-hide the map terminal automatically on click.
+
+1. Go back to your main repository folder and click on **`public/app.js`**.
+2. Click the **Pencil icon** to edit, and replace all code with this script:
+
+```javascript
 let map = null;
 let vehicleMarker = null;
 let poolingIntervalTimer = null;
@@ -8,50 +215,88 @@ function initializeMap(initialLat, initialLng) {
     map = L.map('live-map').setView([initialLat, initialLng], 4);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 18,
-        attribution: '© OpenStreetMap Contributors SML Logistics Analytics'
+        attribution: '© OpenStreetMap Contributors SML'
     }).addTo(map);
     vehicleMarker = L.marker([initialLat, initialLng]).addTo(map)
-        .bindPopup('<b>SML Telemetry Carrier</b><br/>Streaming live analytical vector math.')
+        .bindPopup('<b>SML Cargo Vehicle</b><br/>Streaming live coordinates.')
         .openPopup();
+}
+
+// 🛠️ Operational Helper: Generates a real data payload in the database on your free web URL
+async function createNewTestShipment() {
+    const payload = {
+        sender: "Sky Motion Supply Co.",
+        receiver: "Global Logistics Distributing Ltd.",
+        origin: "New York Hub Depot",
+        destination: "Los Angeles Port Facility"
+    };
+    const response = await fetch('/api/shipments', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+    });
+    const data = await response.json();
+    if(data.tracking_number) {
+        document.getElementById('track-id').value = data.tracking_number;
+        alert(`SUCCESS!\nNew Active Code Registered: ${data.tracking_number}\n\nIt has been automatically pasted into your input field box.`);
+    } else {
+        alert("Server wake-up delay encountered. Tap the button once more.");
+    }
 }
 
 async function startTrackingPipeline() {
     if(poolingIntervalTimer) clearInterval(poolingIntervalTimer);
     await fetchLiveTelemetryStream();
-    poolingIntervalTimer = setInterval(fetchLiveTelemetryStream, 4000);
+    poolingIntervalTimer = setInterval(fetchLiveTelemetryStream, 5000);
 }
 
 async function fetchLiveTelemetryStream() {
     const id = document.getElementById('track-id').value.trim();
-    if (!id) return alert("Please specify an active tracking identifier.");
+    if (!id) return alert("Please enter your SML tracking key first.");
+
     const response = await fetch(`/api/track/${id}`);
     if (response.status === 404) {
         clearInterval(poolingIntervalTimer);
-        return alert("Tracking reference ID could not be located in database assets.");
+        return alert("Tracking reference sequence number not found in server history log.");
     }
+
     const { shipment, events, analytics } = await response.json();
+
+    // UNHIDE MAP WORKSPACE CONTAINER IMMEDIATELY
+    document.getElementById('tracking-workspace').classList.remove('hidden');
+
+    // Populate Analytics Grid fields
     document.getElementById('stat-distance').innerText = analytics.distance_remaining_miles;
     document.getElementById('stat-eta').innerText = analytics.estimated_hours_remaining;
     document.getElementById('stat-speed').innerText = shipment.average_speed_mph;
+
+    // Populate Manifest Profile text details
+    document.getElementById('lbl-id').innerText = shipment.tracking_number;
     document.getElementById('lbl-sender').innerText = shipment.sender;
     document.getElementById('lbl-receiver').innerText = shipment.receiver;
     document.getElementById('lbl-path').innerText = `${shipment.origin} ➔ ${shipment.destination}`;
+
+    // Initialize map overlay graphics
     initializeMap(shipment.lat, shipment.lng);
     const nextPosition = new L.LatLng(shipment.lat, shipment.lng);
     vehicleMarker.setLatLng(nextPosition);
     map.panTo(nextPosition);
+
+    // Render event checkin checklist items
     const log = document.getElementById('geo-history-log');
     log.innerHTML = '';
     events.forEach(ev => {
         const item = document.createElement('li');
-        item.innerHTML = `<b>${ev.location}</b>: ${ev.remarks}`;
+        item.className = "pb-2 border-b border-gray-100 text-gray-600";
+        item.innerHTML = `<b class="text-blue-900">[${ev.location}]</b> ${ev.remarks}`;
         log.appendChild(item);
     });
 }
 
 async function simulateDriverMovement() {
     const id = document.getElementById('track-id').value.trim();
-    if (!id) return alert("Search a tracking ID first to simulate.");
+    if (!id) return alert("Enter your SML tracking key code to track first.");
+
     simulationStepTracker = (simulationStepTracker + 1) % 4;
     await fetch('/api/driver/telemetry', {
         method: 'POST',
@@ -59,5 +304,6 @@ async function simulateDriverMovement() {
         body: JSON.stringify({ tracking_number: id, step: simulationStepTracker })
     });
     await fetchLiveTelemetryStream();
-        }
-                            
+}
+```
+    
