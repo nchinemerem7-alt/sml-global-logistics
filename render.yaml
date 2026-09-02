@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: sml-global-logistics
+    env: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: node server.js
+    disk:
+      name: sml-db-volume
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: DATABASE_PATH
+        value: /data/sml_production.db
+      - key: NODE_ENV
+        value: production
+        
