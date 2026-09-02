@@ -3,127 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SML Global Logistics | Sky Motion Lane Logistics</title>
-    <!-- Embedded, secure basic layout styling bypasses all script filters -->
+    <title>SML Global Logistics | Sky Motion Lane</title>
+    <link rel="stylesheet" href="https://cloudflare.com" />
+    <link rel="stylesheet" href="https://cloudflare.com" />
+    <link rel="stylesheet" href="https://unpkg.com" />
+    <script src="https://unpkg.com"></script>
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-        body { background-color: #f8fafc; color: #1e293b; }
-        .top-bar { background-color: #0f172a; color: #cbd5e1; font-size: 12px; padding: 10px 20px; display: flex; justify-content: space-between; flex-wrap: wrap; }
-        .top-links a { color: #ffffff; text-decoration: none; margin-left: 15px; font-weight: bold; }
-        .top-links a:hover { color: #f59e0b; }
-        nav { background-color: #ffffff; padding: 15px 20px; display: flex; justify-content: space-between; items-center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 50; }
-        .logo { font-size: 22px; font-weight: 800; color: #1e3a8a; }
-        .logo span { color: #f59e0b; margin-right: 4px; }
-        .nav-links { display: flex; gap: 20px; align-items: center; }
-        .nav-links a { text-decoration: none; color: #475569; font-weight: 700; font-size: 14px; text-transform: uppercase; }
-        .nav-links a.active { color: #1e3a8a; border-bottom: 2px solid #1e3a8a; padding-bottom: 4px; }
-        .quote-btn { background-color: #f59e0b; color: white; border: none; padding: 10px 18px; font-weight: bold; border-radius: 4px; cursor: pointer; font-size: 12px; text-transform: uppercase; }
-        .hero { background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)), url('https://unsplash.com'); background-size: cover; background-position: center; color: white; padding: 50px 20px; display: grid; grid-template-columns: 1fr; gap: 30px; }
-        @media (min-width: 992px) { .hero { grid-template-columns: 7fr 5fr; padding: 80px 40px; } }
-        .hero-left { display: flex; flex-direction: column; justify-content: center; gap: 15px; }
-        .hero-tag { color: #fbbf24; font-weight: bold; text-transform: uppercase; tracking: 2px; font-size: 12px; border-left: 3px solid #fbbf24; padding-left: 8px; }
-        .hero h1 { font-size: 36px; font-weight: 800; line-height: 1.2; }
-        .hero p { color: #94a3b8; font-size: 14px; line-height: 1.5; max-w: 500px; }
-        .services-btn { background-color: #2563eb; color: white; text-decoration: none; padding: 12px 20px; border-radius: 4px; font-weight: bold; display: inline-block; width: max-content; font-size: 13px; text-transform: uppercase; margin-top: 10px; }
-        .track-box { background-color: #0b1329; border: 1px solid #1e293b; padding: 24px; border-radius: 8px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.3); color: white; }
-        .track-box h3 { font-size: 18px; font-weight: bold; text-transform: uppercase; margin-bottom: 8px; }
-        .track-box p { color: #94a3b8; font-size: 12px; margin-bottom: 16px; }
-        .track-input-wrap { position: relative; margin-bottom: 12px; }
-        .track-input-wrap input { w-full: 100%; width: 100%; padding: 12px; border-radius: 4px; border: 1px solid #475569; font-size: 14px; font-weight: bold; text-transform: uppercase; color: #0f172a; }
-        .track-btn { w-full: 100%; width: 100%; background-color: #f59e0b; color: white; border: none; padding: 12px; font-weight: bold; border-radius: 4px; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; font-size: 13px; margin-bottom: 10px; }
-        .sim-btn { w-full: 100%; width: 100%; background-color: #1e40af; color: #93c5fd; border: none; padding: 8px; font-family: monospace; font-size: 11px; border-radius: 4px; cursor: pointer; }
-        .workspace { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
-        .workspace-card { background: white; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; overflow: hidden; }
-        .workspace-header { background-color: #1e3a8a; color: white; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; font-size: 14px; font-weight: bold; }
-        .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); border-b: 1px solid #e2e8f0; }
-        .metric-item { padding: 20px; text-align: center; border-right: 1px solid #e2e8f0; }
-        .metric-item:last-child { border-right: none; }
-        .metric-label { font-size: 11px; text-transform: uppercase; color: #64748b; font-weight: bold; margin-bottom: 4px; display: block; }
-        .metric-val { font-size: 28px; font-weight: 900; color: #1e3a8a; }
-        .panel-grid { display: grid; grid-template-columns: 1fr; }
-        @media (min-width: 768px) { .panel-grid { grid-template-columns: 4fr 8fr; } }
-        .manifest-side { padding: 20px; background-color: #f8fafc; border-right: 1px solid #e2e8f0; }
-        .manifest-title { font-size: 12px; text-transform: uppercase; color: #64748b; font-weight: bold; margin-bottom: 10px; }
-        .manifest-info { font-size: 14px; margin-bottom: 20px; line-height: 1.8; }
-        .history-log { border-left: 2px solid #1e3a8a; padding-left: 15px; font-size: 12px; list-style: none; display: flex; flex-direction: column; gap: 12px; }
-        #live-map { width: 100%; height: 350px; background-color: #cbd5e1; }
-        .services-section { max-width: 1200px; margin: 60px auto; padding: 0 20px; text-center: center; text-align: center; }
-        .section-title { font-size: 24px; font-weight: 800; color: #0f172a; margin-top: 4px; }
-        .section-bar { width: 50px; height: 4px; background-color: #f59e0b; margin: 10px auto 30px; border-radius: 2px; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 15px; }
-        .service-card { background: white; border: 1px solid #e2e8f0; border-radius: 6px; padding: 20px 15px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
-        .service-card h4 { font-size: 13px; uppercase: uppercase; font-weight: bold; text-transform: uppercase; margin-bottom: 6px; color: #1e3a8a; }
-        .service-card p { font-size: 11px; color: #64748b; line-height: 1.4; }
-        footer { background-color: #0f172a; color: white; padding: 40px 20px; text-align: center; margin-top: 4px; }
-        .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-        @media (min-width: 768px) { .footer-grid { grid-template-columns: repeat(4, 1fr); } }
-        .stat-num { font-size: 28px; font-weight: 900; color: #fbbf24; }
-        .stat-lbl { font-size: 11px; text-transform: uppercase; color: #94a3b8; font-weight: bold; }
-        .copy { font-size: 11px; color: #475569; margin-top: 30px; border-top: 1px solid #1e293b; padding-top: 20px; }
-        .hidden { display: none !important; }
+        .hero-banner {
+            background: linear-gradient(rgba(11, 19, 41, 0.85), rgba(11, 19, 41, 0.9)), url('https://unsplash.com');
+            background-size: cover;
+            background-position: center;
+        }
     </style>
 </head>
-<body>
-
-    <!-- TOP INFO BAR -->
-    <div class="top-bar">
-        <div>
-            📍 London, UK &nbsp;|&nbsp; 📞 +44 1234 567890 &nbsp;|&nbsp; ✉️ support@smlglobal-logistics.com
-        </div>
-        <div class="top-links">
-            <a href="#tracking-section">🔍 Track</a>
-            <a href="#">👤 Login</a>
-            <a href="#">🔒 Admin</a>
-        </div>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <div class="bg-blue-900 text-white text-xs px-4 py-2 flex justify-between items-center" style="background-color: #0b1329;">
+        <div><i class="fas fa-phone-alt text-yellow-400 mr-1"></i> +44 1234 567890 | <i class="fas fa-envelope text-yellow-400 ml-2 mr-1"></i> support@smlglobal-logistics.com</div>
+        <div>SML Global Infrastructure</div>
     </div>
-
-    <!-- MAIN NAVIGATION BAR -->
-    <nav>
-        <div class="logo"><span>SML</span>GLOBAL LOGISTICS</div>
-        <div class="nav-links">
-            <a href="#" class="active">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#tracking-section">Tracking</a>
-        </div>
-        <button class="quote-btn">Get A Quote</button>
+    <nav class="bg-white shadow px-6 py-4 flex justify-between items-center sticky top-0 z-50">
+        <div class="text-2xl font-extrabold text-blue-900"><span class="text-yellow-500">SML</span> GLOBAL LOGISTICS</div>
+        <button onclick="alert('System active!')" class="bg-yellow-500 text-white font-bold text-xs uppercase px-4 py-2 rounded">Get Quote</button>
     </nav>
-
-    <!-- HERO SECTION & TRACKING CAPTURE -->
-    <header class="hero">
-        <div class="hero-left">
-            <span class="hero-tag">Moving Beyond Borders</span>
-            <h1>Global Logistics Delivered with Care</h1>
-            <p>Reliable, Efficient, On Time, Every Time. SML provisions secure air cargo freight forwarding, coastal sorting hubs, and domestic courier pipelines.</p>
-            <a href="#" class="services-btn">Our Services</a>
-        </div>
-
-        <div id="tracking-section" class="track-box">
-            <h3>Track Your Shipment</h3>
-            <p>Enter your SML tracking number to get real-time status updates and dynamic live location maps.</p>
-            <div class="track-input-wrap">
-                <input type="text" id="track-id" placeholder="Enter Tracking Number (e.g. SML-10293847)">
+    <header class="hero-banner text-white px-6 py-16 min-h-[450px] flex items-center">
+        <div class="max-w-5xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+                <span class="text-yellow-400 font-bold text-xs uppercase tracking-widest block mb-2">Moving Beyond Borders</span>
+                <h1 class="text-4xl font-black mb-4">Global Logistics Delivered with Care</h1>
+                <p class="text-gray-300 text-sm mb-6">Secure air cargo, sorting hubs, and efficient freight routing.</p>
             </div>
-            <button onclick="startTrackingPipeline()" class="track-btn">Track Shipment</button>
-            <button onclick="simulateDriverMovement()" class="sim-btn">🛠️ [Simulation: Advance Vehicle Route]</button>
+            <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-gray-800" style="background-color: #0f172a;">
+                <h3 class="text-white font-bold text-base mb-3"><i class="fas fa-cube text-yellow-500 mr-2"></i> Track Shipment</h3>
+                <input type="text" id="track-id" placeholder="Enter ID (e.g. SML-12345678)" class="w-full p-3 mb-3 text-gray-900 rounded text-sm font-bold uppercase">
+                <button onclick="startTrackingPipeline()" class="w-full bg-yellow-500 text-white font-bold py-3 rounded text-xs uppercase tracking-wider mb-2">Track Now</button>
+                <button onclick="createNewTestShipment()" class="w-full bg-blue-600 text-white font-bold py-2 rounded text-xxs uppercase">➕ Create Test Tracking Code</button>
+            </div>
         </div>
     </header>
-
-    <!-- LIVE DYNAMIC MAP & ANALYTICS WORKSPACE -->
-    <section id="tracking-workspace" class="workspace hidden">
-        <div class="workspace-card">
-            <div class="workspace-header">
-                <div>📡 Live Telemetry Hub</div>
-                <div id="lbl-id">SML-XXXX</div>
+    <section id="tracking-workspace" class="max-w-5xl mx-auto my-8 px-6 hidden">
+        <div class="bg-white rounded-lg shadow p-6">
+            <h4 class="font-bold text-blue-900 mb-4">Live Telemetry Details: <span id="lbl-id">---</span></h4>
+            <div class="grid grid-cols-3 text-center mb-4 text-xs font-bold bg-blue-50 p-3 rounded">
+                <div>Distance: <span id="stat-distance">---</span> mi</div>
+                <div>ETA: <span id="stat-eta">---</span> hrs</div>
+                <div>Speed: <span id="stat-speed">---</span> MPH</div>
             </div>
-            
-            <div class="metrics-grid">
-                <div class="metric-item" style="background-color: #eff6ff;">
-                    <span class="metric-label">Distance to Target</span>
-                    <span id="stat-distance" class="metric-val">---</span> <span style="font-size:12px; font-weight:bold; color:#1e3a8a;">miles</span>
-                </div>
-                <div class="metric-item" style="background-color: #f0fdf4;">
-                    <span class="metric-label">Calculated Transit Window</span>
-                    <span id="stat-eta" class="metric-val">---</span> <span style="font-size:12px; font-weight:bold; color:#166534;">hours left</span>
-                </div>
-                
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <ul id="geo-history-log" class="text-xs space-y-1 border-l-2 border-blue-900 pl-3"></ul>
+                <div id="live-map" class="w-full h-[250px] bg-gray-200 rounded"></div>
+            </div>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
