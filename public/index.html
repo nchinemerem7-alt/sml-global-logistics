@@ -3,57 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SML Global Logistics | Sky Motion Lane</title>
+    <title>SML Global Logistics | Sky Motion Lane Logistics</title>
+    <!-- Standardized Tailwind & Icon library integration -->
     <link rel="stylesheet" href="https://cloudflare.com" />
     <link rel="stylesheet" href="https://cloudflare.com" />
     <link rel="stylesheet" href="https://unpkg.com" />
     <script src="https://unpkg.com"></script>
     <style>
-        .hero-banner {
-            background: linear-gradient(rgba(11, 19, 41, 0.85), rgba(11, 19, 41, 0.9)), url('https://unsplash.com');
+        .hero-bg {
+            background-linear: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.8));
+            background-image: url('https://unsplash.com');
             background-size: cover;
             background-position: center;
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
-    <div class="bg-blue-900 text-white text-xs px-4 py-2 flex justify-between items-center" style="background-color: #0b1329;">
-        <div><i class="fas fa-phone-alt text-yellow-400 mr-1"></i> +44 1234 567890 | <i class="fas fa-envelope text-yellow-400 ml-2 mr-1"></i> support@smlglobal-logistics.com</div>
-        <div>SML Global Infrastructure</div>
+<body class="bg-gray-50 text-slate-800 font-sans">
+
+    <!-- TOP INFO BAR -->
+    <div class="bg-slate-900 text-gray-300 text-xs px-6 py-2 flex flex-wrap justify-between items-center border-b border-gray-700 bg-opacity-95" style="background-color: #0f172a;">
+        <div class="flex items-center space-x-4">
+            <span><i class="fas fa-map-marker-alt text-amber-500 mr-1"></i> London, United Kingdom</span>
+            <span><i class="fas fa-phone-alt text-amber-500 mr-1"></i> +44 1234 567890</span>
+            <span><i class="fas fa-envelope text-amber-500 mr-1"></i> support@smlglobal-logistics.com</span>
+        </div>
+        <div class="flex items-center space-x-4 font-semibold text-white">
+            <a href="#tracking-section" class="hover:text-amber-500"><i class="fas fa-search mr-1"></i> Track Shipment</a>
+            <a href="#" class="hover:text-amber-500"><i class="fas fa-user mr-1"></i> Customer Login</a>
+            <a href="#" class="hover:text-amber-500"><i class="fas fa-lock mr-1"></i> Admin Login</a>
+        </div>
     </div>
-    <nav class="bg-white shadow px-6 py-4 flex justify-between items-center sticky top-0 z-50">
-        <div class="text-2xl font-extrabold text-blue-900"><span class="text-yellow-500">SML</span> GLOBAL LOGISTICS</div>
-        <button onclick="alert('System active!')" class="bg-yellow-500 text-white font-bold text-xs uppercase px-4 py-2 rounded">Get Quote</button>
+
+    <!-- MAIN HERO NAVIGATION BAR -->
+    <nav class="bg-white shadow-md px-6 py-4 flex justify-between items-center sticky top-0 z-50">
+        <div class="flex items-center space-x-3">
+            <div class="text-3xl font-extrabold tracking-tight text-blue-900 flex items-center">
+                <span class="text-amber-500 mr-1">SML</span>GLOBAL LOGISTICS
+            </div>
+            <span class="text-xxs text-gray-400 block border-l pl-2 border-gray-300 italic hidden md:block">Sky Motion Lane Logistics</span>
+        </div>
+        <div class="hidden lg:flex space-x-6 font-bold text-gray-700 text-sm uppercase tracking-wide">
+            <a href="#" class="text-blue-900 hover:text-amber-500 border-b-2 border-blue-900 pb-1">Home</a>
+            <a href="#" class="hover:text-amber-500">About Us</a>
+            <a href="#" class="hover:text-amber-500">Services</a>
+            <a href="#" class="hover:text-amber-500">Solutions</a>
+            <a href="#tracking-section" class="hover:text-amber-500">Tracking</a>
+            <a href="#" class="hover:text-amber-500">Contact Us</a>
+        </div>
+        <button class="bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs uppercase px-5 py-3 rounded shadow transition">Get A Quote</button>
     </nav>
-    <header class="hero-banner text-white px-6 py-16 min-h-[450px] flex items-center">
-        <div class="max-w-5xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div>
-                <span class="text-yellow-400 font-bold text-xs uppercase tracking-widest block mb-2">Moving Beyond Borders</span>
-                <h1 class="text-4xl font-black mb-4">Global Logistics Delivered with Care</h1>
-                <p class="text-gray-300 text-sm mb-6">Secure air cargo, sorting hubs, and efficient freight routing.</p>
+
+    <!-- CORPORATE HERO SLIDER & LIVE TRACKING CAPTURE CONTAINER -->
+    <header class="hero-bg text-white relative min-h-[500px] flex items-center px-6 py-12">
+        <div class="absolute inset-0 bg-black opacity-50 z-0"></div>
+        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+            
+            <!-- Left Branding Pitch Section -->
+            <div class="lg:col-span-7 space-y-4">
+                <span class="text-amber-400 font-bold tracking-widest text-xs uppercase block border-l-4 border-amber-400 pl-2">Moving Beyond Borders</span>
+                <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">Global Logistics<br>Delivered with Care</h1>
+                <p class="text-gray-300 max-w-xl text-sm md:text-base">Reliable, Efficient, On Time, Every Time. SML provisions secure air cargo freight forwarding, coastal sorting hubs, and domestic courier pipelines.</p>
+                <div class="pt-2">
+                    <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs uppercase px-6 py-3.5 rounded shadow inline-flex items-center group transition">
+                        Our Services <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transform transition"></i>
+                    </a>
+                </div>
             </div>
-            <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-gray-800" style="background-color: #0f172a;">
-                <h3 class="text-white font-bold text-base mb-3"><i class="fas fa-cube text-yellow-500 mr-2"></i> Track Shipment</h3>
-                <input type="text" id="track-id" placeholder="Enter ID (e.g. SML-12345678)" class="w-full p-3 mb-3 text-gray-900 rounded text-sm font-bold uppercase">
-                <button onclick="startTrackingPipeline()" class="w-full bg-yellow-500 text-white font-bold py-3 rounded text-xs uppercase tracking-wider mb-2">Track Now</button>
-                <button onclick="createNewTestShipment()" class="w-full bg-blue-600 text-white font-bold py-2 rounded text-xxs uppercase">➕ Create Test Tracking Code</button>
+
+            <!-- Right Visual Dynamic Tracking Console Grid Box -->
+            <div id="tracking-section" class="lg:col-span-5 bg-slate-900 bg-opacity-95 p-6 rounded-lg shadow-2xl border border-gray-800 text-slate-800" style="background-color: #0b1329;">
+                <h3 class="text-white text-lg font-bold uppercase tracking-wider mb-2 flex items-center">
+                    <i class="fas fa-cube text-amber-500 mr-2"></i> Track Your Shipment
+                </h3>
+                <p class="text-gray-400 text-xs mb-4">Enter your SML tracking number to get real-time status updates and dynamic live location maps.</p>
+                
+                <div class="space-y-3">
+                    <div class="relative">
+                        <input type="text" id="track-id" placeholder="Enter Tracking Number (e.g. SML-10293847)" class="w-full p-3.5 pl-11 bg-white border border-gray-300 rounded text-sm focus:outline-none focus:ring-2 focus:ring-amber-500 font-semibold uppercase tracking-wider">
+                        <i class="fas fa-search absolute left-4 top-4 text-gray-400"></i>
+                    </div>
+                    <button onclick="startTrackingPipeline()" class="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-3.5 rounded shadow text-xs uppercase tracking-widest transition">
+                        Track Shipment
+                    </button>
+                    <div class="text-center text-xs text-gray-500 py-1 font-bold">OR</div>
+                    <button class="w-full bg-transparent border border-gray-600 hover:border-white text-gray-300 font-bold py-3 rounded text-xs uppercase tracking-wider transition">
+                        Multiple Tracking
+                    </button>
+                    <button onclick="simulateDriverMovement()" class="w-full bg-blue-800 hover:bg-blue-700 text-white font-mono text-xxs py-1.5 rounded tracking-wide transition">
+                        🛠️ [Simulation Tool: Advance Vehicle Node Route]
+                    </button>
+                </div>
             </div>
+
         </div>
     </header>
-    <section id="tracking-workspace" class="max-w-5xl mx-auto my-8 px-6 hidden">
-        <div class="bg-white rounded-lg shadow p-6">
-            <h4 class="font-bold text-blue-900 mb-4">Live Telemetry Details: <span id="lbl-id">---</span></h4>
-            <div class="grid grid-cols-3 text-center mb-4 text-xs font-bold bg-blue-50 p-3 rounded">
-                <div>Distance: <span id="stat-distance">---</span> mi</div>
-                <div>ETA: <span id="stat-eta">---</span> hrs</div>
-                <div>Speed: <span id="stat-speed">---</span> MPH</div>
+
+    <!-- LIVE DYNAMIC MAP & ANALYTICS WORKSPACE TERMINAL (Unlocks on click) -->
+    <section id="tracking-workspace" class="max-w-7xl mx-auto my-8 px-6 hidden">
+        <div class="bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden">
+            <div class="bg-blue-900 text-white px-6 py-4 flex justify-between items-center" style="background-color: #1e3a8a;">
+                <h4 class="font-bold tracking-wide uppercase text-sm"><i class="fas fa-satellite-dish mr-2 animate-pulse"></i> Telemetry Handover Hub Dashboard</h4>
+                <span id="lbl-id" class="bg-amber-500 text-white text-xs font-mono font-bold px-3 py-1 rounded">SML-XXXX</span>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <ul id="geo-history-log" class="text-xs space-y-1 border-l-2 border-blue-900 pl-3"></ul>
-                <div id="live-map" class="w-full h-[250px] bg-gray-200 rounded"></div>
+            
+            <!-- Real-Time Metrics Row -->
+            <div class="grid grid-cols-1 md:grid-cols-3 border-b text-center">
+                <div class="p-4 border-r border-gray-100 bg-blue-50 bg-opacity-40">
+                    <span class="block text-xs uppercase text-gray-400 font-bold tracking-widest mb-1">Distance to Target</span>
+                    <span id="stat-distance" class="text-3xl font-black text-blue-900">---</span> <span class="text-xs font-bold text-blue-900">miles</span>
+                </div>
+                <div class="p-4 border-r border-gray-100 bg-green-50 bg-opacity-40">
+                    <span class="block text-xs uppercase text-gray-400 font-bold tracking-widest mb-1">Calculated Transit Window</span>
+                    <span id="stat-eta" class="text-3xl font-black text-green-700">---</span> <span class="text-xs font-bold text-green-700">hours left</span>
+                </div>
+                <div class="p-4 bg-purple-50 bg-opacity-40">
+                    <span class="block text-xs uppercase text-gray-400 font-bold tracking-widest mb-1">Average Vehicle Velocity</span>
+                    <span id="stat-speed" class="text-3xl font-black text-purple-800">---</span> <span class="text-xs font-bold text-purple-800">MPH</span>
+                </div>
             </div>
-        </div>
-    </section>
-    <script src="app.js"></script>
-</body>
-</html>
+
+            <!-- Content Area Matrix Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-3">
+                <div class="p-6 bg-gray-50 border-r border-gray-200 space-y-4">
+                    <div>
+                        <h5 class="text-xs uppercase text-gray-400 font-bold tracking-wider mb-2">Manifest Information</h5>
+                        <div class="space-y-1.5 text-sm">
+                            <p class="flex justify-between border-b pb-1"><strong>Sender:</strong> <span id="lbl-sender" class="text-gray-600">---</span></p>
+                            <p class="flex justify-between border-b pb-1"><strong>Recipient:</strong> <span id="lbl-receiver" class="text-gray-600">---</span></p>
+                            <p class="flex justify-between border-b pb-1"><strong>Routing Path:</strong> <span id="lbl-path" class="font-bold text-blue-900">---</span></p>
+                        </div>
+                    </div>
+                    <div>
+                        <h5 class="text-xs uppercase text-gray-400 font-bold tracking-wider mb-3">Live Progress Checkpoints</h5>
+                        
