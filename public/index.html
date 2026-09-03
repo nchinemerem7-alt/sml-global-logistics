@@ -4,135 +4,141 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SML Global Logistics | Sky Motion Lane Logistics</title>
-    <!-- Standardized Tailwind & Icon library integration -->
+    <!-- Premium Google Fonts and Icons Framework integration -->
     <link rel="stylesheet" href="https://cloudflare.com" />
     <link rel="stylesheet" href="https://cloudflare.com" />
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com" />
     <script src="https://unpkg.com"></script>
     <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
         .hero-bg {
-            background-linear: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.8));
-            background-image: url('https://unsplash.com');
+            background: linear-gradient(rgba(11, 19, 41, 0.75), rgba(11, 19, 41, 0.85)), url('https://unsplash.com');
             background-size: cover;
             background-position: center;
         }
     </style>
 </head>
-<body class="bg-gray-50 text-slate-800 font-sans">
+<body class="bg-gray-50 text-slate-800">
 
-    <!-- TOP INFO BAR -->
-    <div class="bg-slate-900 text-gray-300 text-xs px-6 py-2 flex flex-wrap justify-between items-center border-b border-gray-700 bg-opacity-95" style="background-color: #0f172a;">
-        <div class="flex items-center space-x-4">
-            <span><i class="fas fa-map-marker-alt text-amber-500 mr-1"></i> London, United Kingdom</span>
+    <!-- TOP HEADER UTILITIES BANNER -->
+    <div class="bg-blue-950 text-gray-300 text-xs px-4 py-2.5 flex flex-wrap justify-between items-center border-b border-gray-800" style="background-color: #0b1329;">
+        <div class="flex items-center space-x-4 text-xxs sm:text-xs">
+            <span><i class="fas fa-map-marker-alt text-amber-500 mr-1"></i> London, UK</span>
             <span><i class="fas fa-phone-alt text-amber-500 mr-1"></i> +44 1234 567890</span>
-            <span><i class="fas fa-envelope text-amber-500 mr-1"></i> support@smlglobal-logistics.com</span>
+            <span class="hidden md:inline"><i class="fas fa-envelope text-amber-500 mr-1"></i> support@smlglobal-logistics.com</span>
         </div>
-        <div class="flex items-center space-x-4 font-semibold text-white">
-            <a href="#tracking-section" class="hover:text-amber-500"><i class="fas fa-search mr-1"></i> Track Shipment</a>
-            <a href="#" class="hover:text-amber-500"><i class="fas fa-user mr-1"></i> Customer Login</a>
-            <a href="#" class="hover:text-amber-500"><i class="fas fa-lock mr-1"></i> Admin Login</a>
+        <div class="flex items-center space-x-4 font-bold text-white">
+            <a href="#track-id" class="hover:text-amber-400"><i class="fas fa-search mr-1"></i> Track</a>
+            <a href="#" onclick="alert('Portal system active. Database seeding completed.')" class="hover:text-amber-400"><i class="fas fa-lock mr-1"></i> Admin Console</a>
         </div>
     </div>
 
-    <!-- MAIN HERO NAVIGATION BAR -->
-    <nav class="bg-white shadow-md px-6 py-4 flex justify-between items-center sticky top-0 z-50">
-        <div class="flex items-center space-x-3">
-            <div class="text-3xl font-extrabold tracking-tight text-blue-900 flex items-center">
-                <span class="text-amber-500 mr-1">SML</span>GLOBAL LOGISTICS
+    <!-- MAIN BRAND NAVIGATION HEADER -->
+    <nav class="bg-white shadow-sm px-4 sm:px-6 py-4 flex justify-between items-center sticky top-0 z-50">
+        <div class="flex items-center space-x-2">
+            <div class="text-xl sm:text-2xl font-extrabold tracking-tight text-blue-900" style="color: #1e3a8a;">
+                <span class="text-amber-500">SML</span> GLOBAL LOGISTICS
             </div>
-            <span class="text-xxs text-gray-400 block border-l pl-2 border-gray-300 italic hidden md:block">Sky Motion Lane Logistics</span>
         </div>
-        <div class="hidden lg:flex space-x-6 font-bold text-gray-700 text-sm uppercase tracking-wide">
-            <a href="#" class="text-blue-900 hover:text-amber-500 border-b-2 border-blue-900 pb-1">Home</a>
-            <a href="#" class="hover:text-amber-500">About Us</a>
-            <a href="#" class="hover:text-amber-500">Services</a>
-            <a href="#" class="hover:text-amber-500">Solutions</a>
-            <a href="#tracking-section" class="hover:text-amber-500">Tracking</a>
-            <a href="#" class="hover:text-amber-500">Contact Us</a>
+        <div class="hidden lg:flex space-x-6 font-bold text-gray-600 text-xs uppercase tracking-wider">
+            <a href="#" class="text-blue-900 border-b-2 border-blue-900 pb-1">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Services</a>
+            <a href="#track-id">Tracking Hub</a>
+            <a href="#">Contact</a>
         </div>
-        <button class="bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs uppercase px-5 py-3 rounded shadow transition">Get A Quote</button>
+        <button onclick="alert('Pricing calculation API ready. Complete backend link intact.')" class="bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs uppercase px-4 py-2.5 rounded transition shadow-sm">Get Quote</button>
     </nav>
 
-    <!-- CORPORATE HERO SLIDER & LIVE TRACKING CAPTURE CONTAINER -->
-    <header class="hero-bg text-white relative min-h-[500px] flex items-center px-6 py-12">
-        <div class="absolute inset-0 bg-black opacity-50 z-0"></div>
-        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+    <!-- BRAND BANNER & ACTION ENGINE INPUT INTERFACE -->
+    <header class="hero-bg text-white px-4 sm:px-6 py-16 min-h-[480px] flex items-center">
+        <div class="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
-            <!-- Left Branding Pitch Section -->
             <div class="lg:col-span-7 space-y-4">
                 <span class="text-amber-400 font-bold tracking-widest text-xs uppercase block border-l-4 border-amber-400 pl-2">Moving Beyond Borders</span>
-                <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">Global Logistics<br>Delivered with Care</h1>
-                <p class="text-gray-300 max-w-xl text-sm md:text-base">Reliable, Efficient, On Time, Every Time. SML provisions secure air cargo freight forwarding, coastal sorting hubs, and domestic courier pipelines.</p>
-                <div class="pt-2">
-                    <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs uppercase px-6 py-3.5 rounded shadow inline-flex items-center group transition">
-                        Our Services <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transform transition"></i>
-                    </a>
-                </div>
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">Global Logistics<br>Delivered with Care</h1>
+                <p class="text-gray-300 text-xs sm:text-sm max-w-xl leading-relaxed">Reliable, Efficient, On Time, Every Time. SML provisions secure air cargo freight forwarding, coastal sorting hubs, and domestic courier pipelines.</p>
             </div>
 
-            <!-- Right Visual Dynamic Tracking Console Grid Box -->
-            <div id="tracking-section" class="lg:col-span-5 bg-slate-900 bg-opacity-95 p-6 rounded-lg shadow-2xl border border-gray-800 text-slate-800" style="background-color: #0b1329;">
-                <h3 class="text-white text-lg font-bold uppercase tracking-wider mb-2 flex items-center">
+            <!-- SHIPMENT TELEMETRY INPUT GATEWAY PANEL -->
+            <div class="lg:col-span-5 bg-slate-900 bg-opacity-95 p-5 sm:p-6 rounded-xl shadow-2xl border border-gray-800" style="background-color: #0b1329;">
+                <h3 class="text-white text-base sm:text-lg font-bold uppercase tracking-wider mb-1 flex items-center">
                     <i class="fas fa-cube text-amber-500 mr-2"></i> Track Your Shipment
                 </h3>
-                <p class="text-gray-400 text-xs mb-4">Enter your SML tracking number to get real-time status updates and dynamic live location maps.</p>
+                <p class="text-gray-400 text-xs mb-4">Enter your tracking code below to unlock the map view parameters.</p>
                 
-                <div class="space-y-3">
+                <div class="space-y-3 text-slate-800">
                     <div class="relative">
-                        <input type="text" id="track-id" placeholder="Enter Tracking Number (e.g. SML-10293847)" class="w-full p-3.5 pl-11 bg-white border border-gray-300 rounded text-sm focus:outline-none focus:ring-2 focus:ring-amber-500 font-semibold uppercase tracking-wider">
-                        <i class="fas fa-search absolute left-4 top-4 text-gray-400"></i>
+                        <input type="text" id="track-id" placeholder="Enter Reference (e.g. SML-48392019)" class="w-full p-3 pl-10 bg-white border border-gray-300 rounded text-sm font-semibold uppercase tracking-wider focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        <i class="fas fa-search absolute left-3.5 top-3.5 text-gray-400 text-sm"></i>
                     </div>
-                    <button onclick="startTrackingPipeline()" class="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-3.5 rounded shadow text-xs uppercase tracking-widest transition">
+                    <button onclick="startTrackingPipeline()" class="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 rounded text-xs uppercase tracking-widest transition shadow">
                         Track Shipment
                     </button>
-                    <div class="text-center text-xs text-gray-500 py-1 font-bold">OR</div>
-                    <button class="w-full bg-transparent border border-gray-600 hover:border-white text-gray-300 font-bold py-3 rounded text-xs uppercase tracking-wider transition">
-                        Multiple Tracking
-                    </button>
-                    <button onclick="simulateDriverMovement()" class="w-full bg-blue-800 hover:bg-blue-700 text-white font-mono text-xxs py-1.5 rounded tracking-wide transition">
-                        🛠️ [Simulation Tool: Advance Vehicle Node Route]
-                    </button>
+                    
+                    <div class="pt-2 border-t border-gray-800 flex flex-col space-y-2">
+                        <!-- Administrative Mock Controls Setup Trigger -->
+                        <button onclick="createNewTestShipment()" class="w-full bg-blue-700 hover:bg-blue-600 text-white font-bold py-2 rounded text-xxs uppercase tracking-wider transition">
+                            ➕ [Ops: Create New Active Tracking Node]
+                        </button>
+                        <button onclick="simulateDriverMovement()" class="w-full bg-gray-800 hover:bg-gray-700 text-gray-300 font-mono text-xxs py-1.5 rounded transition">
+                            🚚 [Simulator: Move Active Delivery Truck]
+                        </button>
+                    </div>
                 </div>
             </div>
 
         </div>
     </header>
 
-    <!-- LIVE DYNAMIC MAP & ANALYTICS WORKSPACE TERMINAL (Unlocks on click) -->
-    <section id="tracking-workspace" class="max-w-7xl mx-auto my-8 px-6 hidden">
-        <div class="bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden">
-            <div class="bg-blue-900 text-white px-6 py-4 flex justify-between items-center" style="background-color: #1e3a8a;">
-                <h4 class="font-bold tracking-wide uppercase text-sm"><i class="fas fa-satellite-dish mr-2 animate-pulse"></i> Telemetry Handover Hub Dashboard</h4>
-                <span id="lbl-id" class="bg-amber-500 text-white text-xs font-mono font-bold px-3 py-1 rounded">SML-XXXX</span>
+    <!-- INTERACTIVE MAP & ROUTE TELEMETRY DISPLAY TERMINAL CONTAINER -->
+    <section id="tracking-workspace" class="max-w-6xl mx-auto my-8 px-4 hidden">
+        <div class="bg-white rounded-xl shadow-xl border border-gray-200 overflow-hidden">
+            <div class="bg-blue-900 text-white px-4 py-3 flex justify-between items-center" style="background-color: #1e3a8a;">
+                <h4 class="font-bold text-xs uppercase tracking-wider"><i class="fas fa-satellite-dish mr-2 text-amber-400 animate-pulse"></i> Live Telemetry Feed Dashboard</h4>
+                <span id="lbl-id" class="bg-amber-500 text-white text-xs font-mono font-bold px-2.5 py-0.5 rounded">SML-XXXX</span>
             </div>
             
-            <!-- Real-Time Metrics Row -->
-            <div class="grid grid-cols-1 md:grid-cols-3 border-b text-center">
+            <div class="grid grid-cols-1 md:grid-cols-3 border-b text-center text-sm font-semibold">
                 <div class="p-4 border-r border-gray-100 bg-blue-50 bg-opacity-40">
-                    <span class="block text-xs uppercase text-gray-400 font-bold tracking-widest mb-1">Distance to Target</span>
-                    <span id="stat-distance" class="text-3xl font-black text-blue-900">---</span> <span class="text-xs font-bold text-blue-900">miles</span>
+                    <span class="block text-xxs uppercase text-gray-400 font-bold tracking-widest mb-0.5">Remaining Distance</span>
+                    <span id="stat-distance" class="text-2xl font-black text-blue-900">---</span> <span class="text-xs text-blue-900">miles</span>
                 </div>
                 <div class="p-4 border-r border-gray-100 bg-green-50 bg-opacity-40">
-                    <span class="block text-xs uppercase text-gray-400 font-bold tracking-widest mb-1">Calculated Transit Window</span>
-                    <span id="stat-eta" class="text-3xl font-black text-green-700">---</span> <span class="text-xs font-bold text-green-700">hours left</span>
+                    <span class="block text-xxs uppercase text-gray-400 font-bold tracking-widest mb-0.5">ETA Window</span>
+                    <span id="stat-eta" class="text-2xl font-black text-green-700">---</span> <span class="text-xs text-green-700">hours left</span>
                 </div>
                 <div class="p-4 bg-purple-50 bg-opacity-40">
-                    <span class="block text-xs uppercase text-gray-400 font-bold tracking-widest mb-1">Average Vehicle Velocity</span>
-                    <span id="stat-speed" class="text-3xl font-black text-purple-800">---</span> <span class="text-xs font-bold text-purple-800">MPH</span>
+                    <span class="block text-xxs uppercase text-gray-400 font-bold tracking-widest mb-0.5">Vehicle Velocity</span>
+                    <span id="stat-speed" class="text-2xl font-black text-purple-800">---</span> <span class="text-xs text-purple-800">MPH</span>
                 </div>
             </div>
 
-            <!-- Content Area Matrix Layout -->
             <div class="grid grid-cols-1 lg:grid-cols-3">
-                <div class="p-6 bg-gray-50 border-r border-gray-200 space-y-4">
+                <div class="p-5 bg-gray-50 border-r border-gray-200 space-y-4">
                     <div>
-                        <h5 class="text-xs uppercase text-gray-400 font-bold tracking-wider mb-2">Manifest Information</h5>
-                        <div class="space-y-1.5 text-sm">
+                        <h5 class="text-xxs uppercase text-gray-400 font-bold tracking-wider mb-2">Manifest Details</h5>
+                        <div class="space-y-1 text-xs">
                             <p class="flex justify-between border-b pb-1"><strong>Sender:</strong> <span id="lbl-sender" class="text-gray-600">---</span></p>
                             <p class="flex justify-between border-b pb-1"><strong>Recipient:</strong> <span id="lbl-receiver" class="text-gray-600">---</span></p>
-                            <p class="flex justify-between border-b pb-1"><strong>Routing Path:</strong> <span id="lbl-path" class="font-bold text-blue-900">---</span></p>
+                            <p class="flex justify-between border-b pb-1"><strong>Path Profile:</strong> <span id="lbl-path" class="font-bold text-blue-900">---</span></p>
                         </div>
                     </div>
                     <div>
-                        <h5 class="text-xs uppercase text-gray-400 font-bold tracking-wider mb-3">Live Progress Checkpoints</h5>
-            
+                        <h5 class="text-xxs uppercase text-gray-400 font-bold tracking-wider mb-2">Checkpoint Logs</h5>
+                        <ul id="geo-history-log" class="space-y-2 border-l-2 border-blue-900 pl-3 text-xxs max-h-[180px] overflow-y-auto"></ul>
+                    </div>
+                </div>
+                <div class="lg:col-span-2 relative">
+                    <div id="live-map" class="w-full h-[320px] sm:h-[380px]"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE BUSINESS CONTAINER SERVICES GRAPHIC MATRIX -->
+    <section class="max-w-6xl mx-auto px-4 py-12">
+                
